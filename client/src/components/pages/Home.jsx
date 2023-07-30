@@ -1,14 +1,15 @@
 import Hero1 from "../Hero1";
-import MainForm from "../MainForm";
+import Hero2 from "../Hero2";
+import GpaForm from "../GpaForm";
+import CgpaForm from "../CgpaForm";
 
 export default function Home() {
   return (
     <>
             <Hero1/>
-            <MainForm/>
-            {/* <div className="my-7 py-7 min-h-screen">
-                test
-            </div> */}
+            <GpaForm/>
+            <Hero2/>
+            <CgpaForm/>
     </>
 
   )
