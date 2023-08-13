@@ -61,7 +61,7 @@ export default function GpaForm() {
   return (
     <>
         <div className=' bg-slate-200 text-center p-4 text-xl font-extrabold mt-8 md:text-3xl'>
-            GPA Calculation
+            SGPA Calculation
         </div>
 
         <div className="container mx-auto my-2 p-6 bg-gray-100 rounded-lg">
@@ -101,7 +101,7 @@ export default function GpaForm() {
 
             {/* CGPA Display */}
             <div className="my-4 text-3xl">
-                GPA: <strong>  {isNaN(cgpa) ? '0.00' : cgpa} </strong> 
+                SGPA: <strong>  {isNaN(cgpa) ? '0.00' : cgpa} </strong> 
             </div>
         </div>
     
