@@ -1,59 +1,63 @@
-import { useState } from 'react';
-
-const SemesterForm = () => {
-  // State variables to store input values
-  const [semester1GPA, setSemester1GPA] = useState('');
-  const [semester1Credit, setSemester1Credit] = useState('');
-
-  // Add more state variables and corresponding setters for additional semesters if needed.
-
-  // Function to handle input changes for Semester 1
-  const handleSemester1Change = (e) => {
+import PropTypes from 'prop-types';
+const SemesterInput = ({ semesterName, earnedCredit, earnedGpa, onCourseChange }) => {
+  const handleInputChange = (e) => {
     const { name, value } = e.target;
-    if (name === 'semester1GPA') {
-      setSemester1GPA(value);
-    } else if (name === 'semester1Credit') {
-      setSemester1Credit(value);
-    }
+    onCourseChange(name, value);
   };
-
-
-
-  // Add more handle change functions for additional semesters if needed.
-
+ 
   return (
-    <div className="my-4 flex flex-col sm:flex-row justify-between gap-4">
-      {/* Semester 1 */}
-      <div className="w-full sm:w-1/3 relative">
-        <span className="font-medium">Semester 1</span>
-        <div className="flex items-center">
+    <>
+      <div className="my-4 flex flex-col sm:flex-row justify-between gap-4">
+        <div className="w-full sm:w-1/3 relative">
+          <label htmlFor="semesterName" className="block font-medium mb-1">Semester Name</label>
           <input
-            type="number"
-            id="semester1GPA"
-            name="semester1GPA"
-            className="w-20 mr-2 border rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
-            value={semester1GPA}
-            onChange={handleSemester1Change}
-            placeholder="GPA"
+            type="text"
+            id="semesterName"
+            name="semesterName"
+            className="w-full border rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
+            value={semesterName}
+            onChange={handleInputChange}
+            readOnly
           />
-          <span>earned credit:</span>
+        </div>
+
+
+        <div className="w-full sm:w-1/3 relative">
+          <label htmlFor="earnedGpa" className="block font-medium mb-1">Earned GPA</label>
           <input
             type="number"
-            id="semester1Credit"
-            name="semester1Credit"
-            className="w-20 ml-2 border rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
-            value={semester1Credit}
-            onChange={handleSemester1Change}
-            placeholder="Credit"
+            id="earnedGpa"
+            name="earnedGpa"
+            className="w-full border rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
+            value={earnedGpa}
+            onChange={handleInputChange}
+            placeholder="Earned GPA"
+          />
+        </div>
+
+
+        <div className="w-full sm:w-1/3 relative">
+          <label htmlFor="earnedCredit" className="block font-medium mb-1">Earned Credit</label>
+          <input
+            type="number"
+            id="earnedCredit"
+            name="earnedCredit"
+            className="w-full border rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
+            value={earnedCredit}
+            onChange={handleInputChange}
+            placeholder="Enter earned credit"
           />
         </div>
       </div>
-
-     
-
-      {/* Add more semesters here */}
-    </div>
+    </>
   );
 };
 
-export default SemesterForm;
+SemesterInput.propTypes = {
+  semesterName: PropTypes.string.isRequired,
+  earnedCredit: PropTypes.string.isRequired,
+  earnedGpa: PropTypes.string.isRequired,
+  onCourseChange: PropTypes.func.isRequired,
+};
+
+export default SemesterInput;

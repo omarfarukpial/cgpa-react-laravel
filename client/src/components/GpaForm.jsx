@@ -66,10 +66,10 @@ export default function GpaForm() {
 
         <div className="container mx-auto my-2 p-6 bg-gray-100 rounded-lg">
             <div className="flex flex-col gap-6">
-                {/* Render Courseinput components based on courses */}
+               
                 {courses.map((course, index) => (
                 <React.Fragment key={index}>
-                    {/* Course Input */}
+               
                     <Courseinput
                     courseName={course.courseName}
                     credit={course.credit}
