@@ -20,8 +20,6 @@ const SemesterInput = ({ semesterName, earnedCredit, earnedGpa, onCourseChange }
             readOnly
           />
         </div>
-
-
         <div className="w-full sm:w-1/3 relative">
           <label htmlFor="earnedGpa" className="block font-medium mb-1">Earned GPA</label>
           <input

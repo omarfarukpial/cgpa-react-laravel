@@ -5,6 +5,7 @@ export default function Footer () {
           © {new Date().getFullYear()} Omar Faruk Pial. All rights reserved.
         </p>
       </footer>
+      
     );
   }
   

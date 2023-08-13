@@ -8,7 +8,7 @@ const Courseinput = ({ courseName, credit, grade, onCourseChange }) => {
   return (
     <>
       <div className="my-4 flex flex-col sm:flex-row justify-between gap-4">
-        {/* Course Name Input */}
+
         <div className="w-full sm:w-1/3 relative">
           <label htmlFor="courseName" className="block font-medium mb-1">Course Name</label>
           <input
@@ -22,7 +22,6 @@ const Courseinput = ({ courseName, credit, grade, onCourseChange }) => {
           />
         </div>
 
-        {/* Grade Selection Dropdown */}
         <div className="w-full sm:w-1/3">
           <label htmlFor="grade" className="block font-medium mb-1">Grade</label>
           <select
@@ -46,7 +45,7 @@ const Courseinput = ({ courseName, credit, grade, onCourseChange }) => {
           </select>
         </div>
 
-        {/* Course Credit Input */}
+     
         <div className="w-full sm:w-1/3 relative">
           <label htmlFor="courseCredit" className="block font-medium mb-1">Course Credit</label>
           <input

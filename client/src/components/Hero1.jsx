@@ -14,5 +14,6 @@ export default function Hero1() {
           </div>
       </div>
     </div>
+
   )
 }

@@ -77,13 +77,11 @@ export default function GpaForm() {
                     onCourseChange={(fieldName, value) => handleChangeCourse(index, fieldName, value)}
                     />
 
-                    {/* Divider */}
                     {index !== courses.length - 1 && <hr className="border-t-2 border-gray-300" />}
                 </React.Fragment>
                 ))}
             </div>
 
-            {/* "Add Course" Button */}
             <button
                 className="px-4 py-2 mt-6 mr-4 bg-slate-800 text-white rounded-md hover:bg-slate-900 focus:outline-none"
                 onClick={handleAddCourse}

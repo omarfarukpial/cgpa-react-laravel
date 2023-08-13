@@ -11,8 +11,6 @@ export default function CgpaForm() {
   const [showRemoveSemesterButton, setShowRemoveSemesterButton] = useState(false);
   const [tcgpa, setTCGPA] = useState('0.00');
 
-
-  
   useEffect(() => {
     const calcTCGPA = () => {
       let totalCredits = 0;
